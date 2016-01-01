@@ -1,5 +1,5 @@
 <!-- BubbleChart generated in R 3.2.2 by googleVis 0.5.10 package -->
-<!-- Thu Dec 31 16:15:42 2015 -->
+<!-- Fri Jan  1 18:42:10 2016 -->
 
 
 <!-- jsHeader -->
@@ -7,7 +7,7 @@
 
 
 // jsData 
-function gvisDataBubbleChartID5bee50906322 () {
+function gvisDataBubble_Chart () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1339,21 +1339,21 @@ return(data);
 
 
 // jsDrawChart
-function drawChartBubbleChartID5bee50906322() {
-var data = gvisDataBubbleChartID5bee50906322();
+function drawChartBubble_Chart() {
+var data = gvisDataBubble_Chart();
 var options = {};
-options["colorAxis"] = {colors: ['yellow', 'blue']};
+options["colorAxis"] = {colors: ['lightblue', 'blue']};
 options["vAxis"] = {title:'User Count'};
 options["hAxis"] = {title:'Countries'};
 options["width"] =   1000;
 options["height"] =   1000;
 options["bubble"] = {textStyle:{color: 'blue',fontName: 'Times-Roman', fontSize:12}};
 options["explorer"] = {actions: ['dragToZoom', 'rightClickToReset'] };
-options["animation"] = {startup: true};
+options["title"] = "ColumbiaX: DS101X Users Bubble Chart";
 
 
     var chart = new google.visualization.BubbleChart(
-    document.getElementById('BubbleChartID5bee50906322')
+    document.getElementById('Bubble_Chart')
     );
     chart.draw(data,options);
     
@@ -1378,9 +1378,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartBubbleChartID5bee50906322);
+callbacks.push(drawChartBubble_Chart);
 })();
-function displayChartBubbleChartID5bee50906322() {
+function displayChartBubble_Chart() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1406,12 +1406,988 @@ callbacks.shift()();
 
 
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubbleChartID5bee50906322"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartBubble_Chart"></script>
 
 
 <!-- divChart -->
   
-<div id="BubbleChartID5bee50906322" 
+<div id="Bubble_Chart" 
+  style="width: 1000; height: 1000;">
+</div>
+
+<!-- PieChart generated in R 3.2.2 by googleVis 0.5.10 package -->
+<!-- Fri Jan  1 18:42:10 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+
+
+// jsData 
+function gvisDatadoughnut () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Africa",
+2162 
+],
+[
+ "Asia",
+8978 
+],
+[
+ "Australia",
+1038 
+],
+[
+ "Central America",
+2002 
+],
+[
+ "Europe",
+9729 
+],
+[
+ "North America",
+10847 
+],
+[
+ "South America",
+2450 
+] 
+];
+data.addColumn('string','labelvar');
+data.addColumn('number','numvar');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsDrawChart
+function drawChartdoughnut() {
+var data = gvisDatadoughnut();
+var options = {};
+options["allowHtml"] = true;
+options["pieStartAngle"] =    270;
+options["width"] =    500;
+options["height"] =    500;
+options["slices"] = {4: {offset: 0.2}};
+options["title"] = "ColumbiaX: DS101X Users Pie Chart: Region";
+options["legend"] = "none";
+options["pieSliceText"] = "label";
+options["pieHole"] =    0.5;
+options["pieSliceTextStyle"] = {color: 'white',fontName: 'Times-Roman', fontSize:14};
+
+
+    var chart = new google.visualization.PieChart(
+    document.getElementById('doughnut')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartdoughnut);
+})();
+function displayChartdoughnut() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsFooter
+</script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartdoughnut"></script>
+
+
+<!-- divChart -->
+  
+<div id="doughnut" 
+  style="width: 500; height: 500;">
+</div>
+
+<!-- ColumnChart generated in R 3.2.2 by googleVis 0.5.10 package -->
+<!-- Fri Jan  1 18:42:10 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+
+
+// jsData 
+function gvisDataColumn_Chart () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "AND",
+3 
+],
+[
+ "ARE",
+146 
+],
+[
+ "AFG",
+13 
+],
+[
+ "ATG",
+3 
+],
+[
+ "ALB",
+31 
+],
+[
+ "ARM",
+23 
+],
+[
+ "AGO",
+3 
+],
+[
+ "ARG",
+172 
+],
+[
+ "AUT",
+104 
+],
+[
+ "AUS",
+869 
+],
+[
+ "ABW",
+5 
+],
+[
+ "ALA",
+1 
+],
+[
+ "AZE",
+31 
+],
+[
+ "BIH",
+21 
+],
+[
+ "BRB",
+2 
+],
+[
+ "BGD",
+94 
+],
+[
+ "BEL",
+231 
+],
+[
+ "BFA",
+9 
+],
+[
+ "BGR",
+79 
+],
+[
+ "BHR",
+7 
+],
+[
+ "BEN",
+6 
+],
+[
+ "BMU",
+4 
+],
+[
+ "BRN",
+5 
+],
+[
+ "BOL",
+36 
+],
+[
+ "BRA",
+941 
+],
+[
+ "BHS",
+5 
+],
+[
+ "BTN",
+5 
+],
+[
+ "BWA",
+10 
+],
+[
+ "BLR",
+57 
+],
+[
+ "BLZ",
+7 
+],
+[
+ "CAN",
+1092 
+],
+[
+ "COD",
+16 
+],
+[
+ "CAF",
+1 
+],
+[
+ "CHE",
+247 
+],
+[
+ "CIV",
+20 
+],
+[
+ "COK",
+1 
+],
+[
+ "CHL",
+181 
+],
+[
+ "CMR",
+43 
+],
+[
+ "CHN",
+599 
+],
+[
+ "COL",
+418 
+],
+[
+ "CRI",
+77 
+],
+[
+ "CUB",
+1 
+],
+[
+ "CYP",
+14 
+],
+[
+ "CZE",
+117 
+],
+[
+ "DEU",
+1002 
+],
+[
+ "DJI",
+5 
+],
+[
+ "DNK",
+134 
+],
+[
+ "DMA",
+1 
+],
+[
+ "DOM",
+36 
+],
+[
+ "DZA",
+62 
+],
+[
+ "ECU",
+118 
+],
+[
+ "EST",
+33 
+],
+[
+ "EGY",
+376 
+],
+[
+ "ERI",
+1 
+],
+[
+ "ESP",
+920 
+],
+[
+ "ETH",
+66 
+],
+[
+ "FIN",
+140 
+],
+[
+ "FJI",
+13 
+],
+[
+ "FRO",
+2 
+],
+[
+ "FRA",
+669 
+],
+[
+ "GBR",
+1597 
+],
+[
+ "GRD",
+1 
+],
+[
+ "GEO",
+33 
+],
+[
+ "GHA",
+171 
+],
+[
+ "GRL",
+1 
+],
+[
+ "GMB",
+10 
+],
+[
+ "GIN",
+4 
+],
+[
+ "GRC",
+350 
+],
+[
+ "GTM",
+54 
+],
+[
+ "GUM",
+2 
+],
+[
+ "GUY",
+10 
+],
+[
+ "HKG",
+280 
+],
+[
+ "HND",
+27 
+],
+[
+ "HRV",
+56 
+],
+[
+ "HTI",
+16 
+],
+[
+ "HUN",
+118 
+],
+[
+ "IDN",
+193 
+],
+[
+ "IRL",
+175 
+],
+[
+ "ISR",
+119 
+],
+[
+ "IMN",
+1 
+],
+[
+ "IND",
+4181 
+],
+[
+ "IRQ",
+35 
+],
+[
+ "IRN",
+132 
+],
+[
+ "ISL",
+10 
+],
+[
+ "ITA",
+411 
+],
+[
+ "JEY",
+2 
+],
+[
+ "JAM",
+31 
+],
+[
+ "JOR",
+43 
+],
+[
+ "JPN",
+419 
+],
+[
+ "KEN",
+156 
+],
+[
+ "KGZ",
+7 
+],
+[
+ "KHM",
+12 
+],
+[
+ "KOR",
+257 
+],
+[
+ "KWT",
+22 
+],
+[
+ "KAZ",
+40 
+],
+[
+ "LAO",
+2 
+],
+[
+ "LBN",
+30 
+],
+[
+ "LCA",
+2 
+],
+[
+ "LKA",
+60 
+],
+[
+ "LBR",
+12 
+],
+[
+ "LSO",
+6 
+],
+[
+ "LTU",
+52 
+],
+[
+ "LUX",
+18 
+],
+[
+ "LVA",
+33 
+],
+[
+ "LBY",
+7 
+],
+[
+ "MAR",
+123 
+],
+[
+ "MCO",
+1 
+],
+[
+ "MDA",
+16 
+],
+[
+ "MNE",
+5 
+],
+[
+ "MDG",
+10 
+],
+[
+ "MKD",
+13 
+],
+[
+ "MLI",
+4 
+],
+[
+ "MMR",
+21 
+],
+[
+ "MNG",
+29 
+],
+[
+ "MAC",
+12 
+],
+[
+ "MLT",
+11 
+],
+[
+ "MUS",
+26 
+],
+[
+ "MDV",
+7 
+],
+[
+ "MWI",
+16 
+],
+[
+ "MEX",
+678 
+],
+[
+ "MYS",
+211 
+],
+[
+ "MOZ",
+9 
+],
+[
+ "NAM",
+3 
+],
+[
+ "NCL",
+1 
+],
+[
+ "NER",
+6 
+],
+[
+ "NGA",
+412 
+],
+[
+ "NIC",
+13 
+],
+[
+ "NLD",
+509 
+],
+[
+ "NOR",
+87 
+],
+[
+ "NPL",
+65 
+],
+[
+ "NZL",
+141 
+],
+[
+ "OMN",
+16 
+],
+[
+ "PAN",
+19 
+],
+[
+ "PER",
+444 
+],
+[
+ "PNG",
+6 
+],
+[
+ "PHL",
+193 
+],
+[
+ "PAK",
+412 
+],
+[
+ "POL",
+389 
+],
+[
+ "PRI",
+20 
+],
+[
+ "PSE",
+11 
+],
+[
+ "PRT",
+189 
+],
+[
+ "PRY",
+11 
+],
+[
+ "QAT",
+39 
+],
+[
+ "ROU",
+274 
+],
+[
+ "SRB",
+98 
+],
+[
+ "RUS",
+520 
+],
+[
+ "RWA",
+32 
+],
+[
+ "SAU",
+142 
+],
+[
+ "SLB",
+1 
+],
+[
+ "SYC",
+1 
+],
+[
+ "SDN",
+39 
+],
+[
+ "SWE",
+199 
+],
+[
+ "SGP",
+410 
+],
+[
+ "SVN",
+43 
+],
+[
+ "SVK",
+42 
+],
+[
+ "SLE",
+3 
+],
+[
+ "SEN",
+19 
+],
+[
+ "SOM",
+15 
+],
+[
+ "SUR",
+6 
+],
+[
+ "SLV",
+32 
+],
+[
+ "SYR",
+20 
+],
+[
+ "SWZ",
+9 
+],
+[
+ "TCD",
+1 
+],
+[
+ "TGO",
+7 
+],
+[
+ "THA",
+143 
+],
+[
+ "TJK",
+4 
+],
+[
+ "TLS",
+2 
+],
+[
+ "TUN",
+54 
+],
+[
+ "TON",
+1 
+],
+[
+ "TUR",
+284 
+],
+[
+ "TTO",
+22 
+],
+[
+ "TUV",
+1 
+],
+[
+ "TWN",
+240 
+],
+[
+ "TZA",
+38 
+],
+[
+ "UKR",
+334 
+],
+[
+ "UGA",
+85 
+],
+[
+ "USA",
+10698 
+],
+[
+ "URY",
+30 
+],
+[
+ "UZB",
+18 
+],
+[
+ "VCT",
+2 
+],
+[
+ "VEN",
+83 
+],
+[
+ "VNM",
+257 
+],
+[
+ "VUT",
+1 
+],
+[
+ "WSM",
+1 
+],
+[
+ "YEM",
+25 
+],
+[
+ "ZAF",
+218 
+],
+[
+ "ZMB",
+25 
+],
+[
+ "ZWE",
+23 
+] 
+];
+data.addColumn('string','country.alpha3');
+data.addColumn('number','count');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsDrawChart
+function drawChartColumn_Chart() {
+var data = gvisDataColumn_Chart();
+var options = {};
+options["allowHtml"] = true;
+options["vAxis"] = {title:'User Count'};
+options["hAxis"] = {title:'Countries'};
+options["width"] =   1000;
+options["height"] =   1000;
+options["title"] = "ColumbiaX: DS101X Users Bar Chart";
+
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('Column_Chart')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumn_Chart);
+})();
+function displayChartColumn_Chart() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsFooter
+</script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumn_Chart"></script>
+
+
+<!-- divChart -->
+  
+<div id="Column_Chart" 
   style="width: 1000; height: 1000;">
 </div>
 

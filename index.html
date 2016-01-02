@@ -1,5 +1,5 @@
 <!-- BubbleChart generated in R 3.2.2 by googleVis 0.5.10 package -->
-<!-- Fri Jan  1 18:42:10 2016 -->
+<!-- Fri Jan  1 19:27:31 2016 -->
 
 
 <!-- jsHeader -->
@@ -1416,7 +1416,7 @@ callbacks.shift()();
 </div>
 
 <!-- PieChart generated in R 3.2.2 by googleVis 0.5.10 package -->
-<!-- Fri Jan  1 18:42:10 2016 -->
+<!-- Fri Jan  1 19:27:31 2016 -->
 
 
 <!-- jsHeader -->
@@ -1470,8 +1470,8 @@ var data = gvisDatadoughnut();
 var options = {};
 options["allowHtml"] = true;
 options["pieStartAngle"] =    270;
-options["width"] =    500;
-options["height"] =    500;
+options["width"] =    800;
+options["height"] =    800;
 options["slices"] = {4: {offset: 0.2}};
 options["title"] = "ColumbiaX: DS101X Users Pie Chart: Region";
 options["legend"] = "none";
@@ -1540,11 +1540,11 @@ callbacks.shift()();
 <!-- divChart -->
   
 <div id="doughnut" 
-  style="width: 500; height: 500;">
+  style="width: 800; height: 800;">
 </div>
 
 <!-- ColumnChart generated in R 3.2.2 by googleVis 0.5.10 package -->
-<!-- Fri Jan  1 18:42:10 2016 -->
+<!-- Fri Jan  1 19:27:31 2016 -->
 
 
 <!-- jsHeader -->
@@ -1552,7 +1552,7 @@ callbacks.shift()();
 
 
 // jsData 
-function gvisDataColumn_Chart () {
+function gvisDataColumn_Chart_All () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -2317,8 +2317,8 @@ return(data);
 
 
 // jsDrawChart
-function drawChartColumn_Chart() {
-var data = gvisDataColumn_Chart();
+function drawChartColumn_Chart_All() {
+var data = gvisDataColumn_Chart_All();
 var options = {};
 options["allowHtml"] = true;
 options["vAxis"] = {title:'User Count'};
@@ -2329,7 +2329,7 @@ options["title"] = "ColumbiaX: DS101X Users Bar Chart";
 
 
     var chart = new google.visualization.ColumnChart(
-    document.getElementById('Column_Chart')
+    document.getElementById('Column_Chart_All')
     );
     chart.draw(data,options);
     
@@ -2354,9 +2354,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartColumn_Chart);
+callbacks.push(drawChartColumn_Chart_All);
 })();
-function displayChartColumn_Chart() {
+function displayChartColumn_Chart_All() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -2382,12 +2382,956 @@ callbacks.shift()();
 
 
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumn_Chart"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumn_Chart_All"></script>
 
 
 <!-- divChart -->
   
-<div id="Column_Chart" 
+<div id="Column_Chart_All" 
+  style="width: 1000; height: 1000;">
+</div>
+
+<!-- ColumnChart generated in R 3.2.2 by googleVis 0.5.10 package -->
+<!-- Fri Jan  1 19:27:31 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+
+
+// jsData 
+function gvisDataColumn_Chart_50 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "USA",
+10698 
+],
+[
+ "IND",
+4181 
+],
+[
+ "GBR",
+1597 
+],
+[
+ "CAN",
+1092 
+],
+[
+ "DEU",
+1002 
+],
+[
+ "BRA",
+941 
+],
+[
+ "ESP",
+920 
+],
+[
+ "AUS",
+869 
+],
+[
+ "MEX",
+678 
+],
+[
+ "FRA",
+669 
+],
+[
+ "CHN",
+599 
+],
+[
+ "RUS",
+520 
+],
+[
+ "NLD",
+509 
+],
+[
+ "PER",
+444 
+],
+[
+ "JPN",
+419 
+],
+[
+ "COL",
+418 
+],
+[
+ "NGA",
+412 
+],
+[
+ "PAK",
+412 
+],
+[
+ "ITA",
+411 
+],
+[
+ "SGP",
+410 
+],
+[
+ "POL",
+389 
+],
+[
+ "EGY",
+376 
+],
+[
+ "GRC",
+350 
+],
+[
+ "UKR",
+334 
+],
+[
+ "TUR",
+284 
+],
+[
+ "HKG",
+280 
+],
+[
+ "ROU",
+274 
+],
+[
+ "KOR",
+257 
+],
+[
+ "VNM",
+257 
+],
+[
+ "CHE",
+247 
+],
+[
+ "TWN",
+240 
+],
+[
+ "BEL",
+231 
+],
+[
+ "ZAF",
+218 
+],
+[
+ "MYS",
+211 
+],
+[
+ "SWE",
+199 
+],
+[
+ "IDN",
+193 
+],
+[
+ "PHL",
+193 
+],
+[
+ "PRT",
+189 
+],
+[
+ "CHL",
+181 
+],
+[
+ "IRL",
+175 
+],
+[
+ "ARG",
+172 
+],
+[
+ "GHA",
+171 
+],
+[
+ "KEN",
+156 
+],
+[
+ "ARE",
+146 
+],
+[
+ "THA",
+143 
+],
+[
+ "SAU",
+142 
+],
+[
+ "NZL",
+141 
+],
+[
+ "FIN",
+140 
+],
+[
+ "DNK",
+134 
+],
+[
+ "IRN",
+132 
+] 
+];
+data.addColumn('string','country.alpha3');
+data.addColumn('number','count');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsDrawChart
+function drawChartColumn_Chart_50() {
+var data = gvisDataColumn_Chart_50();
+var options = {};
+options["allowHtml"] = true;
+options["vAxis"] = {title:'User Count'};
+options["hAxis"] = {title:'Countries'};
+options["width"] =   1000;
+options["height"] =   1000;
+options["title"] = "ColumbiaX: DS101X-Top 50 Bar Chart";
+
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('Column_Chart_50')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumn_Chart_50);
+})();
+function displayChartColumn_Chart_50() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsFooter
+</script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumn_Chart_50"></script>
+
+
+<!-- divChart -->
+  
+<div id="Column_Chart_50" 
+  style="width: 1000; height: 1000;">
+</div>
+
+<!-- ColumnChart generated in R 3.2.2 by googleVis 0.5.10 package -->
+<!-- Fri Jan  1 19:27:31 2016 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+
+
+// jsData 
+function gvisDataColumn_Chart_other () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "MAR",
+123 
+],
+[
+ "ISR",
+119 
+],
+[
+ "ECU",
+118 
+],
+[
+ "HUN",
+118 
+],
+[
+ "CZE",
+117 
+],
+[
+ "AUT",
+104 
+],
+[
+ "SRB",
+98 
+],
+[
+ "BGD",
+94 
+],
+[
+ "NOR",
+87 
+],
+[
+ "UGA",
+85 
+],
+[
+ "VEN",
+83 
+],
+[
+ "BGR",
+79 
+],
+[
+ "CRI",
+77 
+],
+[
+ "ETH",
+66 
+],
+[
+ "NPL",
+65 
+],
+[
+ "DZA",
+62 
+],
+[
+ "LKA",
+60 
+],
+[
+ "BLR",
+57 
+],
+[
+ "HRV",
+56 
+],
+[
+ "GTM",
+54 
+],
+[
+ "TUN",
+54 
+],
+[
+ "LTU",
+52 
+],
+[
+ "CMR",
+43 
+],
+[
+ "JOR",
+43 
+],
+[
+ "SVN",
+43 
+],
+[
+ "SVK",
+42 
+],
+[
+ "KAZ",
+40 
+],
+[
+ "QAT",
+39 
+],
+[
+ "SDN",
+39 
+],
+[
+ "TZA",
+38 
+],
+[
+ "BOL",
+36 
+],
+[
+ "DOM",
+36 
+],
+[
+ "IRQ",
+35 
+],
+[
+ "EST",
+33 
+],
+[
+ "GEO",
+33 
+],
+[
+ "LVA",
+33 
+],
+[
+ "RWA",
+32 
+],
+[
+ "SLV",
+32 
+],
+[
+ "ALB",
+31 
+],
+[
+ "AZE",
+31 
+],
+[
+ "JAM",
+31 
+],
+[
+ "LBN",
+30 
+],
+[
+ "URY",
+30 
+],
+[
+ "MNG",
+29 
+],
+[
+ "HND",
+27 
+],
+[
+ "MUS",
+26 
+],
+[
+ "YEM",
+25 
+],
+[
+ "ZMB",
+25 
+],
+[
+ "ARM",
+23 
+],
+[
+ "ZWE",
+23 
+],
+[
+ "KWT",
+22 
+],
+[
+ "TTO",
+22 
+],
+[
+ "BIH",
+21 
+],
+[
+ "MMR",
+21 
+],
+[
+ "CIV",
+20 
+],
+[
+ "PRI",
+20 
+],
+[
+ "SYR",
+20 
+],
+[
+ "PAN",
+19 
+],
+[
+ "SEN",
+19 
+],
+[
+ "LUX",
+18 
+],
+[
+ "UZB",
+18 
+],
+[
+ "COD",
+16 
+],
+[
+ "HTI",
+16 
+],
+[
+ "MDA",
+16 
+],
+[
+ "MWI",
+16 
+],
+[
+ "OMN",
+16 
+],
+[
+ "SOM",
+15 
+],
+[
+ "CYP",
+14 
+],
+[
+ "AFG",
+13 
+],
+[
+ "FJI",
+13 
+],
+[
+ "MKD",
+13 
+],
+[
+ "NIC",
+13 
+],
+[
+ "KHM",
+12 
+],
+[
+ "LBR",
+12 
+],
+[
+ "MAC",
+12 
+],
+[
+ "MLT",
+11 
+],
+[
+ "PSE",
+11 
+],
+[
+ "PRY",
+11 
+],
+[
+ "BWA",
+10 
+],
+[
+ "GMB",
+10 
+],
+[
+ "GUY",
+10 
+],
+[
+ "ISL",
+10 
+],
+[
+ "MDG",
+10 
+],
+[
+ "BFA",
+9 
+],
+[
+ "MOZ",
+9 
+],
+[
+ "SWZ",
+9 
+],
+[
+ "BHR",
+7 
+],
+[
+ "BLZ",
+7 
+],
+[
+ "KGZ",
+7 
+],
+[
+ "LBY",
+7 
+],
+[
+ "MDV",
+7 
+],
+[
+ "TGO",
+7 
+],
+[
+ "BEN",
+6 
+],
+[
+ "LSO",
+6 
+],
+[
+ "NER",
+6 
+],
+[
+ "PNG",
+6 
+],
+[
+ "SUR",
+6 
+],
+[
+ "ABW",
+5 
+],
+[
+ "BRN",
+5 
+],
+[
+ "BHS",
+5 
+],
+[
+ "BTN",
+5 
+],
+[
+ "DJI",
+5 
+],
+[
+ "MNE",
+5 
+],
+[
+ "BMU",
+4 
+],
+[
+ "GIN",
+4 
+],
+[
+ "MLI",
+4 
+],
+[
+ "TJK",
+4 
+],
+[
+ "AND",
+3 
+],
+[
+ "ATG",
+3 
+],
+[
+ "AGO",
+3 
+],
+[
+ "NAM",
+3 
+],
+[
+ "SLE",
+3 
+],
+[
+ "BRB",
+2 
+],
+[
+ "FRO",
+2 
+],
+[
+ "GUM",
+2 
+],
+[
+ "JEY",
+2 
+],
+[
+ "LAO",
+2 
+],
+[
+ "LCA",
+2 
+],
+[
+ "TLS",
+2 
+],
+[
+ "VCT",
+2 
+],
+[
+ "ALA",
+1 
+],
+[
+ "CAF",
+1 
+],
+[
+ "COK",
+1 
+],
+[
+ "CUB",
+1 
+],
+[
+ "DMA",
+1 
+],
+[
+ "ERI",
+1 
+],
+[
+ "GRD",
+1 
+],
+[
+ "GRL",
+1 
+],
+[
+ "IMN",
+1 
+],
+[
+ "MCO",
+1 
+],
+[
+ "NCL",
+1 
+],
+[
+ "SLB",
+1 
+],
+[
+ "SYC",
+1 
+],
+[
+ "TCD",
+1 
+],
+[
+ "TON",
+1 
+],
+[
+ "TUV",
+1 
+],
+[
+ "VUT",
+1 
+],
+[
+ "WSM",
+1 
+] 
+];
+data.addColumn('string','country.alpha3');
+data.addColumn('number','count');
+data.addRows(datajson);
+return(data);
+}
+
+
+// jsDrawChart
+function drawChartColumn_Chart_other() {
+var data = gvisDataColumn_Chart_other();
+var options = {};
+options["allowHtml"] = true;
+options["vAxis"] = {title:'User Count'};
+options["hAxis"] = {title:'Countries'};
+options["width"] =   1000;
+options["height"] =   1000;
+options["title"] = "ColumbiaX: DS101X - Rest of Users Bar Chart";
+
+
+    var chart = new google.visualization.ColumnChart(
+    document.getElementById('Column_Chart_other')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+
+
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "corechart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartColumn_Chart_other);
+})();
+function displayChartColumn_Chart_other() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+
+
+// jsFooter
+</script>
+
+
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartColumn_Chart_other"></script>
+
+
+<!-- divChart -->
+  
+<div id="Column_Chart_other" 
   style="width: 1000; height: 1000;">
 </div>
 

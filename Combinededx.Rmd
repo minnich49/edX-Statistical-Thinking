@@ -33,7 +33,7 @@ setwd('/Users/bobminnich/Documents/Columbia/edX Course')
 ```
 <br>
 
-If you get an error, you may need to install the libraries using the following as an example:
+#####If you get an error, you may need to install the libraries using the following as an example:
 
 ```{r, eval = FALSE}
 install.packages("rworldmap")
@@ -53,6 +53,7 @@ mp <- ggplot() +   mapWorld
 #Plot points related to latitude and longitude, with the size and color based on the count
 ```
 <br>
+
 #####If you are wondering what a function does, and some of it's input parameters you can simply type a "?" then a function to get more information within the Help. ex: `?borders` will give you more information about the function "borders"
 <br>
 
